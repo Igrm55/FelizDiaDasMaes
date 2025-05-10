@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para a Mulher Mais Incrível do Mundo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        :root {
+            --primary-color: #e91e63;
+            --secondary-color: #ff80ab;
+            --accent-color: #ff4081;
+            --light-color: #f8bbd0;
+            --dark-color: #c2185b;
+            --text-color: #333;
+            --light-text: #fff;
+            --background: #fff9fb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-color);
+            background-color: var(--background);
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .special-font {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: var(--light-text);
+            text-align: center;
+            padding: 3rem 1rem;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ffffff10"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+            background-size: 150px;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 90%;
+            margin: 0 auto 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 1.8rem;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .heart {
+            position: absolute;
+            pointer-events: none;
+            animation: float 6s ease-in-out infinite;
+            z-index: 0;
+        }
+
+        /* Main Content Styles */
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--primary-color));
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            text-align: center;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h2::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        /* Letter Section */
+        .letter {
+            font-size: 1rem;
+            line-height: 1.7;
+            padding: 1.5rem;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            position: relative;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none" stroke="%23e91e6310" stroke-width="1"><path d="M0,0 L100,0 L100,100 L0,100 Z"/></svg>');
+        }
+
+        .letter::after {
+            content: "";
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 100px;
+            height: 100px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23e91e63"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+            background-repeat: no-repeat;
+            background-size: contain;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            text-align: right;
+            margin-top: 2rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .signature::before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            right: 0;
+            width: 150px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary-color));
+        }
+
+        /* Photo Carousel */
+        .carousel-container {
+            position: relative;
+            max-width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+            height: 300px;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            flex-shrink: 0;
+            background-color: #f5f5f5;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            color: var(--primary-color);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        #prevBtn {
+            left: 10px;
+        }
+
+        #nextBtn {
+            right: 10px;
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .indicator.active {
+            background-color: white;
+            transform: scale(1.2);
+        }
+
+        /* Music Player */
+        .music-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .music-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ffffff10"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>');
+            background-size: 150px;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .music-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .spotify-player {
+            margin: 1rem auto;
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .spotify-player:hover {
+            transform: scale(1.02);
+        }
+
+        /* Heart Messages */
+        .hearts-section {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .hearts-instruction {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            animation: pulse 2s infinite;
+        }
+
+        .hearts-garden {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .heart-container {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.2));
+        }
+
+        .heart-container:hover {
+            transform: translateY(-5px) scale(1.1);
+            filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+        }
+
+        .heart-shape {
+            position: relative;
+            width: 60px;
+            height: 55px;
+            margin: 0 auto;
+            transform-origin: center;
+            transition: all 0.5s ease;
+        }
+
+        .heart-shape::before,
+        .heart-shape::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 30px;
+            height: 50px;
+            background: var(--primary-color);
+            border-radius: 30px 30px 0 0;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .heart-shape::before {
+            left: 30px;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+
+        .heart-shape::after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+
+        .heart-message {
+            position: absolute;
+            top: -80px;
+            left: 50%;
+            transform: translateX(-50%) scale(0);
+            width: 180px;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            opacity: 0;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-align: center;
+            font-size: 0.9rem;
+            border: 1px solid var(--light-color);
+        }
+
+        .heart-message::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 8px 8px 0;
+            border-style: solid;
+            border-color: white transparent transparent;
+        }
+
+        .heart-container.open .heart-message {
+            transform: translateX(-50%) scale(1);
+            opacity: 1;
+        }
+
+        .heart-container.open .heart-shape {
+            transform: scale(1.2);
+            filter: brightness(1.2);
+        }
+
+        /* Photo Gallery */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .photo-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            height: 150px;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .photo-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .photo-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Heart Rain Button */
+        .heart-rain-btn {
+            display: block;
+            margin: 2rem auto 0;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .heart-rain-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            text-align: center;
+            padding: 2.5rem 1rem;
+            margin-top: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ffffff10"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+            background-size: 150px;
+            opacity: 0.1;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .heart-beat {
+            font-size: 1.8rem;
+            color: var(--light-color);
+            animation: heartbeat 1.5s infinite;
+            display: inline-block;
+            margin: 0 0.3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-message {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes confettiFall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-15px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-7px) translateX(-50%);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translate(-50%, -50%);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y)));
+                opacity: 0;
+            }
+        }
+
+        /* Special Effects */
+        .confetti {
+            position: fixed;
+            width: 12px;
+            height: 12px;
+            background-color: var(--primary-color);
+            opacity: 0;
+            z-index: 1000;
+            animation: confettiFall 5s linear forwards;
+        }
+
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        .heart-rain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 200;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            max-width: 95%;
+            max-height: 95%;
+            position: relative;
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            max-height: 90vh;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .close-modal:hover {
+            transform: rotate(90deg);
+        }
+
+        .modal-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 15px;
+        }
+
+        .modal-btn {
+            background-color: rgba(255, 255, 255, 0.7);
+            color: var(--primary-color);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .modal-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            background-color: var(--dark-color);
+            transform: translateY(-5px) scale(1.1);
+        }
+
+        /* Responsive Styles */
+        @media (min-width: 768px) {
+            header h1 {
+                font-size: 3rem;
+            }
+
+            header p {
+                font-size: 1.4rem;
+            }
+
+            .container {
+                padding: 2rem;
+            }
+
+            section {
+                padding: 2rem;
+                margin-bottom: 3rem;
+            }
+
+            h2 {
+                font-size: 2.2rem;
+            }
+
+            .letter {
+                font-size: 1.1rem;
+                padding: 2rem;
+            }
+
+            .carousel {
+                height: 400px;
+            }
+
+            .photo-gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .photo-item {
+                height: 200px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .photo-gallery {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div class="floating-hearts" id="heartsContainer"></div>
+
+    <!-- Heart Rain Container -->
+    <div class="heart-rain" id="heartRain"></div>
+
+    <!-- Header -->
+    <header>
+        <h1 class="special-font animate__animated animate__fadeInDown">Feliz Dia das Mães!</h1>
+        <p class="animate__animated animate__fadeIn">Um presente digital para a mulher mais especial do mundo</p>
+        <div class="scroll-down animate__animated animate__bounce animate__infinite">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Letter Section -->
+        <section id="letter" class="animate__animated animate__fadeIn">
+            <h2 class="special-font">Para a melhor Mãe do mundo</h2>
+            <div class="letter">
+                <p>Eu poderia ter simplesmente escrito uma cartinha simples, ou talvez ter falado tudo isso pessoalmente olhando nos seus olhos… mas eu queria fazer algo diferente. Algo que ficasse registrado, que durasse pra sempre, assim como o amor que sinto pela senhora. Por isso, criei esse site do zero, com todo meu carinho, como um presente único, feito especialmente pra você.</p>
+                
+                <p>Essa é a forma que encontrei de dizer, de um jeito mais especial, o quanto você é importante na minha vida. Porque às vezes as palavras se perdem no dia a dia, entre a correria, os compromissos, os pequenos conflitos. Mas hoje, nesse Dia das Mães, eu queria que cada palavra ficasse marcada, não só no coração, mas também nesse pedacinho da internet feito só pra você.</p>
+                
+                <p>Tudo começou em 2007, lá em Bauru, quando eu ainda era só uma sementinha crescendo dentro da sua barriga. E olha, mesmo que eu não me lembre de nada daquela época, ainda fico me achando por ter nascido paulista — vai entender hahaha. O tempo passou tão rápido… parece que foi ontem que a senhora me colocava no colo, me levava pra escola, me dava bronca, me enchia de beijos e me fazia dormir com historinhas.</p>
+                
+                <p>Hoje eu ja tenho 18 anos e quase 1,90m de altura (esqueci de parar de crescer kkkk), mas em muitos momentos ainda me sinto seu garotinho. Aquele que fingia saber nadar nas cachoeiras da Chapada Diamantina, enquanto você me segurava. Aquele que sorria ao ouvir sua voz, que chorava no seu colo, que buscava abrigo nos seus braços quando o mundo parecia grande demais.</p>
+                
+                <p>Mãe, sei que nem sempre sou fácil. Tenho meus momentos de rebeldia, de impaciência, de teimosia. Às vezes deixo os pratos sujos, esqueço de arrumar as coisas, falo de forma ríspida sem perceber… e por tudo isso, me perdoa. Nunca foi por mal. Às vezes é só a confusão dentro da cabeça de um jovem tentando crescer, se encontrar, aprender. Mas uma coisa é certa: nunca houve um segundo em que eu não te amasse profundamente.</p>
+                
+                <p>Eu vejo o quanto a senhora se esforça. Acordando cedo, saindo pra trabalhar, enfrentando o trânsito, o cansaço, os desafios da vida. Chegando em casa já de madrugada, e ainda assim perguntando se tá tudo bem, se eu comi, se eu tô estudando. Seu amor é tão forte, tão verdadeiro, que mesmo nas suas exaustões, você me acolhe. Mesmo nos seus limites, você me oferece apoio. Mesmo sem forças, você me dá luz.</p>
+                
+                <p>Eu prometo que tudo isso não é em vão. Eu vou estudar, vou crescer, vou conquistar meus sonhos. E entre eles, o maior de todos é ver a senhora feliz. Quero me formar, me tornar um ótimo engenheiro de software, e te dar a vida tranquila que você merece. Quero te ver descansando, rindo, viajando, saindo com as amigas pra tomar um café ou dar boas risadas no shopping. Quero te ver bronzeada numa praia, ouvindo o som do mar, sem nenhuma preocupação com boletos, horários ou obrigações.</p>
+                
+                <p>Você cuidou de mim por toda a vida, agora é minha vez de cuidar da senhora. Aposentar você será minha maior alegria. Ver você vivendo sem peso, sem pressa, sem cobranças… só paz, leveza e amor.</p>
+                
+                <p>Fiz esse site, essa surpresa, com todo meu coração. Não só pra comemorar essa data, mas pra que a senhora nunca se esqueça: eu te amo mais do que qualquer coisa nesse mundo. E mesmo que eu não saiba sempre demonstrar, meu amor por você é infinito. Você é minha base, minha referência, meu abrigo, minha fortaleza.</p>
+                
+                <p>Ahhh, e claro… tinha que ter chocolate, né? Eu nunca sei que presente dar, mas dessa vez acertei em cheio: dei aquilo que você ama (e confessa que é viciada hahaha). Chocólatra assumida! Espero que tenha gostado. Também escolhi uma música especial — toda vez que escuto, me vem você na cabeça, com aquele seu jeitinho único, seu sorriso, sua força, sua ternura.</p>
+                
+                <p>Esse é o meu jeito de dizer: Feliz Dia das Mães.<br>
+                Você é insubstituível.<br>
+                Você é tudo pra mim.<br>
+                Te amo eternamente.</p>
+                
+                <div class="signature">Com todo o amor do mundo,<br>Igor — o seu filho.</div>
+            </div>
+        </section>
+
+        <!-- Photo Carousel - Horizontal Photos Only -->
+        <section id="photos" class="animate__animated animate__fadeIn">
+            <h2 class="special-font">Nossas Memórias</h2>
+            <div class="carousel-container">
+                <div class="carousel" id="carousel">
+                    <img src="https://i.postimg.cc/xTJjZ6SG/768595721-321089.jpg" alt="Mãe e filho">
+                    <img src="https://i.postimg.cc/qqYJR32C/768596299-640720.jpg" alt="Mãe e filho">
+                    <img src="https://i.postimg.cc/Twt2zSw0/768596393-507397.jpg" alt="Mãe e filho">
+                    <img src="https://i.postimg.cc/mkhZBw1s/768596540-086660.jpg" alt="Mãe e filho">
+                    <img src="https://i.postimg.cc/fLzTgZwk/768596756-264648.jpg" alt="Mãe e filho">
+                    <img src="https://i.postimg.cc/P5DxC23f/768596861-229068.jpg" alt="Mãe e filho">
+                    <img src="https://i.postimg.cc/q7XvLgH9/768597009-632901.jpg" alt="Mãe e filho">
+                    <img src="https://i.postimg.cc/N0w0mmS6/768597412-115279.jpg" alt="Mãe e filho">
+                    <img src="https://i.postimg.cc/xTh8jWPF/768597492-473763.jpg" alt="Mãe e filho">
+                    <img src="https://i.postimg.cc/4y3ynGMj/768597590-193447.jpg" alt="Mãe e filho">
+                    <img src="https://i.postimg.cc/dtLDYqGy/768597878-786575.jpg" alt="Mãe e filho">
+                    <img src="https://i.postimg.cc/jq8CmWnT/768598177-741250.jpg" alt="Mãe e filho">
+                    <img src="https://i.postimg.cc/43zmSBV2/768598313-987805.jpg" alt="Mãe e filho">
+                    <img src="https://i.postimg.cc/3wMk1P4D/768598485-543299.jpg" alt="Mãe e filho">
+                    <img src="https://i.postimg.cc/PxyNtJ6m/768598603-934379.jpg" alt="Mãe e filho">
+                    <img src="https://i.postimg.cc/BQ6Pn5ft/768598653-142956.jpg" alt="Mãe e filho">
+                    <img src="https://i.postimg.cc/WbHFFDs8/768598711-483658.jpg" alt="Mãe e filho">
+                    <img src="https://i.postimg.cc/FFGJvWq2/768598762-807799.jpg" alt="Mãe e filho">
+                    <img src="https://i.postimg.cc/8ckJWMFK/768598819-045446.jpg" alt="Mãe e filho">
+                    <img src="https://i.postimg.cc/tJr1zJWX/768599090-457008.jpg" alt="Mãe e filho">
+                </div>
+                <button class="carousel-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+                <div class="carousel-indicators" id="indicators"></div>
+            </div>
+        </section>
+
+        <!-- Music Player -->
+        <section id="music" class="animate__animated animate__fadeIn">
+            <h2 class="special-font">Músicas que me Lembram Você</h2>
+            <div class="music-section">
+                <div class="music-container">
+                    <div class="spotify-player">
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1mSxbLW7fKABfeY4lGpg0E?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                    <div class="spotify-player">
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5aayWOEE7u7bxZ3r7dwIrX?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                    <div class="spotify-player">
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5nwT95l5rMdQPaydjGh32q?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Heart Messages -->
+        <section id="hearts" class="animate__animated animate__fadeIn">
+            <h2 class="special-font">Mensagens Especiais</h2>
+            <div class="hearts-section">
+                <p class="hearts-instruction">Clique nos corações para ver as mensagens</p>
+            </div>
+            <div class="hearts-garden">
+                <!-- Hearts will be added dynamically -->
+            </div>
+            <button class="heart-rain-btn" id="heartRainBtn">Ativar Chuva de Corações</button>
+        </section>
+
+        <!-- Photo Gallery -->
+        <section id="gallery" class="animate__animated animate__fadeIn">
+            <h2 class="special-font">Nossas Fotos</h2>
+            <div class="photo-gallery">
+                <div class="photo-item">
+                    <img src="https://i.postimg.cc/6615zDF5/768595937-924427.jpg" alt="Mãe e filho">
+                </div>
+                <div class="photo-item">
+                    <img src="https://i.postimg.cc/qqYJR32C/768596299-640720.jpg" alt="Mãe e filho">
+                </div>
+                <div class="photo-item">
+                    <img src="https://i.postimg.cc/Twt2zSw0/768596393-507397.jpg" alt="Mãe e filho">
+                </div>
+                <div class="photo-item">
+                    <img src="https://i.postimg.cc/mkhZBw1s/768596540-086660.jpg" alt="Mãe e filho">
+                </div>
+                <div class="photo-item">
+                    <img src="https://i.postimg.cc/fLzTgZwk/768596756-264648.jpg" alt="Mãe e filho">
+                </div>
+                <div class="photo-item">
+                    <img src="https://i.postimg.cc/P5DxC23f/768596861-229068.jpg" alt="Mãe e filho">
+                </div>
+                <div class="photo-item">
+                    <img src="https://i.postimg.cc/q7XvLgH9/768597009-632901.jpg" alt="Mãe e filho">
+                </div>
+                <div class="photo-item">
+                    <img src="https://i.postimg.cc/N0w0mmS6/768597412-115279.jpg" alt="Mãe e filho">
+                </div>
+                <div class="photo-item">
+                    <img src="https://i.postimg.cc/xTh8jWPF/768597492-473763.jpg" alt="Mãe e filho">
+                </div>
+                <div class="photo-item">
+                    <img src="https://i.postimg.cc/4y3ynGMj/768597590-193447.jpg" alt="Mãe e filho">
+                </div>
+                <div class="photo-item">
+                    <img src="https://i.postimg.cc/dtLDYqGy/768597878-786575.jpg" alt="Mãe e filho">
+                </div>
+                <div class="photo-item">
+                    <img src="https://i.postimg.cc/jq8CmWnT/768598177-741250.jpg" alt="Mãe e filho">
+                </div>
+                <div class="photo-item">
+                    <img src="https://i.postimg.cc/43zmSBV2/768598313-987805.jpg" alt="Mãe e filho">
+                </div>
+                <div class="photo-item">
+                    <img src="https://i.postimg.cc/3wMk1P4D/768598485-543299.jpg" alt="Mãe e filho">
+                </div>
+                <div class="photo-item">
+                    <img src="https://i.postimg.cc/PxyNtJ6m/768598603-934379.jpg" alt="Mãe e filho">
+                </div>
+                <div class="photo-item">
+                    <img src="https://i.postimg.cc/BQ6Pn5ft/768598653-142956.jpg" alt="Mãe e filho">
+                </div>
+                <div class="photo-item">
+                    <img src="https://i.postimg.cc/WbHFFDs8/768598711-483658.jpg" alt="Mãe e filho">
+                </div>
+                <div class="photo-item">
+                    <img src="https://i.postimg.cc/FFGJvWq2/768598762-807799.jpg" alt="Mãe e filho">
+                </div>
+                <div class="photo-item">
+                    <img src="https://i.postimg.cc/8ckJWMFK/768598819-045446.jpg" alt="Mãe e filho">
+                </div>
+                <div class="photo-item">
+                    <img src="https://i.postimg.cc/tJr1zJWX/768599090-457008.jpg" alt="Mãe e filho">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="animate__animated animate__fadeIn">
+        <p class="footer-message">Mãe, a senhora é muito especial para mim</p>
+        <p>Este site foi feito com todo o meu carinho especialmente para você</p>
+        <p>Eu te amo hoje e para sempre <span class="heart-beat"><i class="fas fa-heart"></i></span></p>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Modal for Gallery -->
+    <div class="modal" id="imageModal">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="">
+        </div>
+        <div class="modal-nav">
+            <button class="modal-btn" id="prevModalBtn"><i class="fas fa-chevron-left"></i></button>
+            <button class="modal-btn" id="nextModalBtn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <script>
+        // Carousel Functionality
+        const carousel = document.getElementById('carousel');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const indicatorsContainer = document.getElementById('indicators');
+        const images = document.querySelectorAll('.carousel img');
+        let currentIndex = 0;
+        const totalImages = images.length;
+
+        // Create indicators
+        for (let i = 0; i < totalImages; i++) {
+            const indicator = document.createElement('div');
+            indicator.classList.add('indicator');
+            if (i === 0) indicator.classList.add('active');
+            indicator.addEventListener('click', () => {
+                goToImage(i);
+            });
+            indicatorsContainer.appendChild(indicator);
+        }
+
+        const indicators = document.querySelectorAll('.indicator');
+
+        function goToImage(index) {
+            currentIndex = index;
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+            
+            // Update indicators
+            indicators.forEach((indicator, i) => {
+                if (i === currentIndex) {
+                    indicator.classList.add('active');
+                } else {
+                    indicator.classList.remove('active');
+                }
+            });
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            goToImage(currentIndex);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalImages;
+            goToImage(currentIndex);
+        });
+
+        // Auto-rotate carousel
+        let carouselInterval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalImages;
+            goToImage(currentIndex);
+        }, 5000);
+
+        // Pause on hover
+        carousel.addEventListener('mouseenter', () => {
+            clearInterval(carouselInterval);
+        });
+
+        carousel.addEventListener('mouseleave', () => {
+            carouselInterval = setInterval(() => {
+                currentIndex = (currentIndex + 1) % totalImages;
+                goToImage(currentIndex);
+            }, 5000);
+        });
+
+        // Heart Messages
+        const heartMessages = [
+            "Você é a melhor mãe do mundo!",
+            "Te amo mais que tudo!",
+            "Obrigado por tudo, mãe!",
+            "Você é meu porto seguro!",
+            "Nada se compara ao seu amor!",
+            "Você é minha heroína!",
+            "Mãe, você é incrível!",
+            "Seu amor é meu maior tesouro!",
+            "Você merece o mundo e mais!",
+            "Feliz Dia das Mães!",
+            "Sua força me inspira!",
+            "Seu sorriso ilumina meu dia!",
+            "Você é minha melhor amiga!",
+            "Seu abraço é meu conforto!",
+            "Sua paciência é infinita!",
+            "Você é um exemplo de mulher!"
+        ];
+
+        const heartsGarden = document.querySelector('.hearts-garden');
+        const colors = ['#e91e63', '#ff4081', '#f50057', '#ff80ab', '#f8bbd0', '#c2185b', '#ad1457'];
+
+        heartMessages.forEach((message, index) => {
+            const heartContainer = document.createElement('div');
+            heartContainer.classList.add('heart-container');
+            
+            const heartShape = document.createElement('div');
+            heartShape.classList.add('heart-shape');
+            heartShape.style.setProperty('--color', colors[index % colors.length]);
+            
+            const heartMessage = document.createElement('div');
+            heartMessage.classList.add('heart-message');
+            heartMessage.textContent = message;
+            
+            heartContainer.appendChild(heartShape);
+            heartContainer.appendChild(heartMessage);
+            
+            heartContainer.addEventListener('click', () => {
+                heartContainer.classList.toggle('open');
+                
+                // Close other open hearts
+                document.querySelectorAll('.heart-container.open').forEach(openHeart => {
+                    if (openHeart !== heartContainer) {
+                        openHeart.classList.remove('open');
+                    }
+                });
+            });
+            
+            heartsGarden.appendChild(heartContainer);
+        });
+
+        // Floating Hearts Background
+        function createHearts() {
+            const heartsContainer = document.getElementById('heartsContainer');
+            const heartCount = 30;
+            
+            for (let i = 0; i < heartCount; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                heart.innerHTML = '<i class="fas fa-heart"></i>';
+                
+                // Random position
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                
+                // Random size
+                const size = Math.random() * 1 + 0.5;
+                
+                // Random opacity
+                const opacity = Math.random() * 0.5 + 0.1;
+                
+                // Random color
+                const colors = ['#e91e63', '#ff4081', '#f50057', '#ff80ab', '#f8bbd0'];
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                
+                // Random animation duration and delay
+                const duration = Math.random() * 15 + 10;
+                const delay = Math.random() * -20;
+                
+                heart.style.left = `${posX}%`;
+                heart.style.top = `${posY}%`;
+                heart.style.fontSize = `${size}rem`;
+                heart.style.opacity = opacity;
+                heart.style.color = color;
+                heart.style.animationDuration = `${duration}s`;
+                heart.style.animationDelay = `${delay}s`;
+                
+                heartsContainer.appendChild(heart);
+            }
+        }
+
+        createHearts();
+
+        // Heart Rain Effect
+        const heartRainBtn = document.getElementById('heartRainBtn');
+        const heartRainContainer = document.getElementById('heartRain');
+        let isRainingHearts = false;
+
+        function createHeartRain() {
+            if (isRainingHearts) return;
+            
+            isRainingHearts = true;
+            heartRainBtn.textContent = "Chuva de Corações Ativa";
+            heartRainBtn.style.backgroundColor = "#4caf50";
+            
+            // Create 50 hearts with "Eu te amo mãe" message
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.innerHTML = '<i class="fas fa-heart"></i><span>Eu te amo mãe</span>';
+                    heart.style.position = 'absolute';
+                    heart.style.color = '#e91e63';
+                    heart.style.fontSize = `${Math.random() * 1.5 + 1}rem`;
+                    heart.style.left = `${Math.random() * 100}%`;
+                    heart.style.top = '-50px';
+                    heart.style.transform = 'translateY(0)';
+                    heart.style.opacity = '1';
+                    heart.style.zIndex = '200';
+                    heart.style.animation = `fall ${Math.random() * 3 + 2}s linear forwards`;
+                    heart.style.setProperty('--end-x', `${Math.random() * 40 - 20}px`);
+                    
+                    // Style for the text
+                    heart.querySelector('span').style.position = 'absolute';
+                    heart.querySelector('span').style.left = '50%';
+                    heart.querySelector('span').style.transform = 'translateX(-50%)';
+                    heart.querySelector('span').style.bottom = '-20px';
+                    heart.querySelector('span').style.fontSize = '0.7rem';
+                    heart.querySelector('span').style.whiteSpace = 'nowrap';
+                    heart.querySelector('span').style.color = '#e91e63';
+                    
+                    heartRainContainer.appendChild(heart);
+                    
+                    // Remove heart after animation
+                    setTimeout(() => {
+                        heart.remove();
+                    }, 5000);
+                }, i * 200);
+            }
+            
+            // Stop rain after 10 seconds
+            setTimeout(() => {
+                isRainingHearts = false;
+                heartRainBtn.textContent = "Ativar Chuva de Corações";
+                heartRainBtn.style.backgroundColor = "";
+            }, 10000);
+        }
+
+        // Add keyframes for heart rain
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes fall {
+                0% {
+                    transform: translateY(0) rotate(0deg);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(100vh) translateX(var(--end-x)) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        heartRainBtn.addEventListener('click', createHeartRain);
+
+        // Confetti Effect
+        function createConfetti() {
+            const colors = ['#e91e63', '#ff4081', '#f50057', '#ff80ab', '#f8bbd0', '#673ab7', '#9c27b0'];
+            
+            for (let i = 0; i < 100; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                
+                // Random properties
+                const size = Math.random() * 10 + 5;
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                const posX = Math.random() * window.innerWidth;
+                const delay = Math.random() * 5;
+                const duration = Math.random() * 3 + 2;
+                const shape = Math.random() > 0.5 ? '50%' : '0';
+                
+                confetti.style.width = `${size}px`;
+                confetti.style.height = `${size}px`;
+                confetti.style.backgroundColor = color;
+                confetti.style.left = `${posX}px`;
+                confetti.style.animationDelay = `${delay}s`;
+                confetti.style.animationDuration = `${duration}s`;
+                confetti.style.borderRadius = shape;
+                
+                document.body.appendChild(confetti);
+                
+                // Remove after animation
+                setTimeout(() => {
+                    confetti.remove();
+                }, duration * 1000);
+            }
+        }
+
+        // Trigger confetti on header click
+        document.querySelector('header').addEventListener('click', createConfetti);
+
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scrollTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Scroll Down Button
+        document.querySelector('.scroll-down').addEventListener('click', () => {
+            document.querySelector('#letter').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        // Gallery Modal
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const closeModal = document.querySelector('.close-modal');
+        const prevModalBtn = document.getElementById('prevModalBtn');
+        const nextModalBtn = document.getElementById('nextModalBtn');
+        const photoItems = document.querySelectorAll('.photo-item');
+        let currentImageIndex = 0;
+
+        photoItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                currentImageIndex = index;
+                modal.style.display = 'flex';
+                modalImg.src = item.querySelector('img').src;
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        prevModalBtn.addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex - 1 + photoItems.length) % photoItems.length;
+            modalImg.src = photoItems[currentImageIndex].querySelector('img').src;
+        });
+
+        nextModalBtn.addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex + 1) % photoItems.length;
+            modalImg.src = photoItems[currentImageIndex].querySelector('img').src;
+        });
+
+        // Close modal when clicking outside the image
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Animate sections on scroll
+        const sections = document.querySelectorAll('section');
+        
+        function checkScroll() {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (sectionTop < windowHeight * 0.75) {
+                    section.classList.add('animate__fadeIn');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkScroll);
+        window.addEventListener('load', checkScroll);
+
+        // Typewriter effect for header
+        const headerText = "Feliz Dia das Mães!";
+        let i = 0;
+        const typingEffect = setInterval(() => {
+            document.querySelector('header h1').textContent = headerText.substring(0, i);
+            i++;
+            if (i > headerText.length) {
+                clearInterval(typingEffect);
+            }
+        }, 150);
+    </script>
+</body>
+</html>
